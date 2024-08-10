@@ -9,7 +9,7 @@ const app: Application = express();
 app.use(express.json());
 app.use(cors());
 
-// CREATE CURRENT USER
+// CREATE || UPDATE CURRENT USER
 app.use("/api/my/user", myUserRouter);
 
 app.get("/test", async (req: Request, res: Response) => {
