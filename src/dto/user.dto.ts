@@ -22,10 +22,6 @@ export const validateMyUserRequest = [
     .notEmpty()
     .withMessage("addressLine1 must be a string"),
   body("city").isString().notEmpty().withMessage("city must be a string"),
-  body("county").isString().notEmpty().withMessage("county must be a string"),
-  body("contact")
-    .isNumeric()
-    .notEmpty()
-    .withMessage("contact must be a numeric"),
+  body("country").isString().notEmpty().withMessage("country must be a string"),
   handleValidationErrors,
 ];

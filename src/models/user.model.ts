@@ -18,12 +18,9 @@ const userSchema = new mongoose.Schema({
   city: {
     type: String,
   },
-  county: {
+  country: {
     type: String,
-  },
-  contact: {
-    type: Number,
-  },
+  }
 });
 
 const User = mongoose.model("User", userSchema);
