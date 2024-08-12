@@ -25,7 +25,7 @@ export const createCurrentUser = async (req: Request, res: Response) => {
 // UPDATE CURRENT USER
 export const updateCurrentUser = async (req: Request, res: Response) => {
   try {
-    const { name, addressLine1, country, city } = req.body;
+    const { name, addressLine1, country, city, number } = req.body;
 
     const user = await User.findById(req.userId);
 
@@ -37,6 +37,7 @@ export const updateCurrentUser = async (req: Request, res: Response) => {
     user.addressLine1 = addressLine1;
     user.country = country;
     user.city = city;
+    user.number = number;
 
     await user.save();
 
