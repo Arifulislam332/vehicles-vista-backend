@@ -23,6 +23,6 @@ export const validateMyUserRequest = [
     .withMessage("addressLine1 must be a string"),
   body("city").isString().notEmpty().withMessage("city must be a string"),
   body("country").isString().notEmpty().withMessage("country must be a string"),
-  body("number").isNumeric().notEmpty().withMessage("Number must be a number"),
+  body("number").isString().notEmpty().withMessage("Number must be a number"),
   handleValidationErrors,
 ];
